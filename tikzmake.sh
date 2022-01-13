@@ -9,6 +9,8 @@ rm *.tex
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     open $1.pdf
+elif [[ "$OSTYPE" == "msys"* ]]; then
+    start "$1.pdf"
 else
     xdg-open $1.pdf
 fi
